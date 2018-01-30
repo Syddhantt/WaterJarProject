@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div>
+    <div class="form-group">
+      <label for="Customer">Name</label>
+      <input type="text" class="form-control" id="txtCustomerName" ngModel name="Name">
+    </div>
+    <div class="form-group">
+      <label for="area">Address</label>
+      <input type="text" class="form-control" id="txtAddress" ngModel name="Address">
+    </div>
+    <div class="form-group">
+      <label for="Cell : ">Cell</label>
+      <input type="text" class="form-control" id="txtCell" ngModel name="Cell">
+    </div>
+    <div class="form-group">
+      <label>Area : </label>
+      <select ngModel name="Area">
+        <option *ngFor="let areas of area"  value="{{areas.Area_Name}}">{{areas.Area_Name}}</option>
+      </select>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
