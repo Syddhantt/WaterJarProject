@@ -14,6 +14,7 @@ export class CustomerComponent implements OnInit{
   }
   area = [];
 
+  
   loadArea(){
     this.httpService.getAreaData().subscribe(data => this.area=data);
     
